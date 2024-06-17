@@ -1,6 +1,6 @@
 package shann.java.problems;
 
-public class ReverseTheWord {
+public class NumeratorAndDenominator {
 
     public static void main(String[] args) {
         int[] arr1 = {3,9};
@@ -23,7 +23,5 @@ public class ReverseTheWord {
         result[0]= numerator;
         result[1]= denominator;
         System.out.println(result[0]+" "+result[1]);
-//        list.stream().filter(emp -> Collections.frequency(list, emp.getDepartment()));
-//        list.stream().collect(Collectors    .groupingBy(Employee.getDepartment(), Collectors.counting()));
     }
 }

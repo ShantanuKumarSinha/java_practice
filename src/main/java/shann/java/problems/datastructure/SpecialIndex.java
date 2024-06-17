@@ -39,7 +39,7 @@ public class SpecialIndex {
             if(i==0){
                 sumOfEvenIndex = prefixOddSum.get(prefixOddSum.size()-1)-prefixOddSum.get(0);
                 sumOfOddIndex = prefixEvenSum.get(prefixEvenSum.size()-1)-prefixEvenSum.get(0);
-            } else {
+            } else {    
             sumOfEvenIndex = prefixEvenSum.get(i)+prefixOddSum.get(A.size()-1)-prefixOddSum.get(i-1);
             sumOfOddIndex = prefixOddSum.get(i)+prefixEvenSum.get(A.size()-1)-prefixEvenSum.get(i-1);
             }

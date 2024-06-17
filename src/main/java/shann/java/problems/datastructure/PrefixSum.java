@@ -15,9 +15,9 @@ public class PrefixSum {
     public ArrayList<Long> rangeSum(List<Integer> A, List<List<Integer>> B) {
         ArrayList<Long> sumArray = new ArrayList<>();
         ArrayList<Long> prefixSum = new ArrayList<>();
-        for (int i = 0; i < A.size(); i++) {
-      if (i == 0) prefixSum.add((long) A.get(i));
-      else prefixSum.add((long) A.get(i) + prefixSum.get(i-1));
+        prefixSum.add(0,(long)A.get(0));
+        for (int i = 1; i < A.size(); i++) {
+             prefixSum.add((long) A.get(i) + prefixSum.get(i-1));
         }
         int l =0, r=0;
         for(int i=0; i<B.size();i++){
