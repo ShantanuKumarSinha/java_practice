@@ -1,0 +1,12 @@
+
+‹	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Ã7J$2e2d3d5e-16f5-4c2b-a855-1d5b52ab8e7a
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ûŠ¯ùÿÿÿÿ8¸ã‘—†2
+
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(¼Ã7J$2a7bd7e6-bb32-47e2-9882-358d4b3d102e
+v
+java:S1481
+"5Remove this unused "longestSubString" local variable.(î²œŸùÿÿÿÿJ$22691e9f-cf24-45f1-a1fe-5ff1333a8ae0
+b
+java:S1659"!Declare "end" on a separate line.(Ğ£«ÊùÿÿÿÿJ$2fd3eb5f-a968-4b70-ac99-68dc6c6ade4c
+]
+java:S1659&"!Declare "end" on a separate line.(ã“ÇŠJ$5be03f1a-3413-4720-8d94-138c8e2dce61

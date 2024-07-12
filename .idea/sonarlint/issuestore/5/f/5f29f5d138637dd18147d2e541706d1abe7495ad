@@ -1,0 +1,15 @@
+
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì¦™Þ8éà°¤‡2J$478cfdc6-f5ae-4048-821c-b77c12d576c2
+¡
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜ØñÚüÿÿÿÿ8éà°¤‡2J$27a1909b-85c6-482c-ba05-484b9990a363
+¡
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜ØñÚüÿÿÿÿ8êà°¤‡2J$dc9a4488-8baf-442b-aa07-556436674398
+b
+java:S1659
+"Declare "r" on a separate line.(…áÆÏ8ïà°¤‡2J$107f1dd2-245a-4545-8b97-e192c6445c72
+f
+java:S1659"#Declare "right" on a separate line.(£ÊÇç8ïà°¤‡2J$cb692271-8351-4889-a41e-5c5de71b3a55
+l
+java:S1481")Remove this unused "left" local variable.(£ÊÇç8ñà°¤‡2J$d6f22838-2c07-4737-9e8c-5a1f89b0d7fd
+m
+java:S1481"*Remove this unused "right" local variable.(£ÊÇç8ñà°¤‡2J$03213192-4d00-4c24-a73c-403243d13a17

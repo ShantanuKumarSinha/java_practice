@@ -1,0 +1,5 @@
+
+Œ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ˆ¦×J$c1c102db-7881-49ba-bf9d-567edddd7525
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²š°¦ûÿÿÿÿ8™‘§ý…2J$1e982d94-ddf8-4286-ae15-b8fb5b79624d
+¬
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(±ˆ¦×J$71761f4e-6602-4ac4-81fc-fb9938727619

@@ -1,0 +1,9 @@
+
+‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯¿×üûÿÿÿÿJ$5b23aecc-0856-4cf8-98a2-088d1e07709e
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²š°¦ûÿÿÿÿ8Ê”—†2J$54408dc1-190c-4ae0-ac2f-978c598331bc
+“
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¯¿×üûÿÿÿÿJ$257d7d4d-94f9-4f62-a309-0082561fa7e7
+f
+java:S1481"*Remove this unused "count" local variable.(æÕ¿¼J$4e126fb6-a561-49dd-8973-8b28f41180cc
+g
+java:S1659&"+Declare "sumOfOddIndex" on a separate line.(¿úÉÙJ$4b6f4df2-fca8-4142-80ef-e9e94009d9e4

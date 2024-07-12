@@ -1,0 +1,7 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ÄŸ­ûÿÿÿÿ8¹ÂğÌ†2
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì¦™Ş8¹ÂğÌ†2
+]
+java:S1659"@Declare "col" and all following declarations on a separate line.(÷Á’8¾ÂğÌ†2
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¾ÂğÌ†2

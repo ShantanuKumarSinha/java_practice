@@ -1,0 +1,12 @@
+
+‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ã‹ûÿÿÿÿJ$cbb1c849-3bb7-456f-b88f-8f83b4a3744e
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(²š°¦ûÿÿÿÿ8°¯ı…2J$91f7e810-3b02-4884-a9ca-9b55be77032f
+p
+java:S1066$"/Merge this if statement with the enclosing one.(é×²šúÿÿÿÿJ$738f5428-5873-4ac7-b1a1-01c2aa2411c9
+¢
+java:S1319"aThe type of "A" should be an interface such as "List" rather than the implementation "ArrayList".(©Ã‹ûÿÿÿÿJ$ce1a02e8-ff57-4b04-8862-cac6ba513d70
+w	java:S125"<This block of commented-out lines of code should be removed.(ÿÚÜÇJ$e55fc68c-36af-4639-9efa-a98705d13bbd
+“
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(©Ã‹ûÿÿÿÿJ$12645d7e-084c-4094-a01e-028f65988fca
+p
+java:S1659"/Declare "currentIndexOfMax" on a separate line.(á¿ÒÑûÿÿÿÿJ$ff18028c-e622-4d0d-b10a-4f4af8bf7c7e

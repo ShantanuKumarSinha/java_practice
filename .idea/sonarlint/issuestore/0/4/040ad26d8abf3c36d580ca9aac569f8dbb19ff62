@@ -1,0 +1,21 @@
+
+‘	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛëÙöøÿÿÿÿJ$07fd9517-649f-4a5d-986d-a23f56eb7eaa
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì¦™Þ8ÉÎ“—†2
+¢
+java:S1319"aThe type of "A" should be an interface such as "List" rather than the implementation "ArrayList".(ÛëÙöøÿÿÿÿJ$5f41d05f-637f-4941-9713-bfd1dac1bd60
+±
+java:S1319%"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(·¿Ö³øÿÿÿÿJ$364ecc7e-e27a-45ef-8f25-a0a5f530c4a7
+p
+java:S3740
+"/Provide the parametrized type for this generic.(ÎŠŒíüÿÿÿÿJ$89ad4f97-312a-4fb5-930a-de8137be59ae
+p
+java:S3740
+"/Provide the parametrized type for this generic.(ÎŠŒíüÿÿÿÿJ$d618f3e8-6d18-487d-9e29-79318a5aa4a9
+k
+java:S3740"/Provide the parametrized type for this generic.(èíá¤J$448bff2d-97ab-4f2c-9d68-e280c172236e
+k
+java:S3740"/Provide the parametrized type for this generic.(èíá¤J$4bb24b14-9518-4172-9410-2c51de0cdfda
+
+java:S1854">Remove this useless assignment to local variable "swappedRow".(ß§·åþÿÿÿÿJ$e60afbbc-0f9e-4894-b8b7-c6a4a09bef18
+p
+java:S1481"/Remove this unused "swappedRow" local variable.(ß§·åþÿÿÿÿJ$df29873b-d5b6-4abd-95ec-b5893a67711d
