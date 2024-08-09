@@ -1,9 +1,9 @@
-package shann.java.problems.datastructure.Strings;
+package shann.java.problems.datastructure.strings;
 
 public class LongestPalindromeSubString {
   public static void main(String[] args) {
     LongestPalindromeSubString lsp = new LongestPalindromeSubString();
-    System.out.println(lsp.longestPalindrome("abb"));
+    System.out.println(lsp.longestPalindrome("rwabcbawed"));
   }
 
   public String longestPalindrome(String A) {

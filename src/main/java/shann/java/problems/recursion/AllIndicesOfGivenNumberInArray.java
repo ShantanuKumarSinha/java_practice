@@ -1,6 +1,6 @@
 package shann.java.problems.recursion;
 
-public class AllIndicesOfArray {
+public class AllIndicesOfGivenNumberInArray {
   public static void main(String[] args){
     var result =allIndices(new int[]{1,5,4,19,5,7,17,49,5},5);
     for(Integer i : result){

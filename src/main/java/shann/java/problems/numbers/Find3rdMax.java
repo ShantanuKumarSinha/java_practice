@@ -1,4 +1,4 @@
-package shann.java.problems.others;
+package shann.java.problems.numbers;
 
 public class Find3rdMax {
 

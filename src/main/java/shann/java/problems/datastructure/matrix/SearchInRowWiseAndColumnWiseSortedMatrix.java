@@ -22,19 +22,19 @@ public class SearchInRowWiseAndColumnWiseSortedMatrix {
   }
 
   private int search(int[][] matrix, int searchCriteria) {
-    int col = matrix[0].length - 1, row = 0;
-    int sum = 0, ans = Integer.MAX_VALUE;
-    while (col >= 0 && row < matrix.length) {
-      if (matrix[row][col] == searchCriteria) {
-        sum = (row + 1) * 1009 + col + 1;
-        if (sum < ans) ans = sum;
-        col--;
-      } else if (matrix[row][col] > searchCriteria) {
-        col--;
-      } else row++;
-    }
-    if(ans==Integer.MAX_VALUE&& sum==0)
-      return -1;
-    return ans;
+      int col = matrix[0].length - 1, row = 0;
+      int sum = 0, ans = Integer.MAX_VALUE;
+      while (col >= 0 && row < matrix.length) {
+        if (matrix[row][col] == searchCriteria) {
+          sum = (row + 1) * 1009 + col + 1;
+          if (sum < ans) ans = sum;
+          col--;    
+        } else if (matrix[row][col] > searchCriteria) {
+          col--;
+        } else row++;
+      }
+      if(ans==Integer.MAX_VALUE&& sum==0)
+        return -1;
+      return ans;
   }
 }

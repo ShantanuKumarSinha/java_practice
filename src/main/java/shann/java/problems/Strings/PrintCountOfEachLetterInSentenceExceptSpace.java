@@ -1,4 +1,4 @@
-package shann.java.problems.others;
+package shann.java.problems.Strings;
 
 import java.util.function.Function;
 import java.util.stream.Collectors;
