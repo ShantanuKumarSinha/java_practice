@@ -1,6 +1,6 @@
-package shann.java.problems.sorting;
+package shann.java.problems.sorting.quicksort;
 
-import static shann.java.problems.sorting.PartitionOfAnArray.partitionOfAnArray;
+import static shann.java.problems.sorting.quicksort.PartitionOfAnArray.partitionOfAnArray;
 
 // TODO
 public class QuickSort {

@@ -1,4 +1,4 @@
-package shann.java.problems.sorting;
+package shann.java.problems.sorting.quicksort;
 
 import java.util.Arrays;
 

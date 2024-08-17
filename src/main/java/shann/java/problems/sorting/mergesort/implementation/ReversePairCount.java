@@ -1,12 +1,7 @@
-package shann.java.problems.sorting;
-//TODO
-public class ReversePairCount {
-  public static void main(String[] args) {
-    int[] arr = {41, 3, 2, 3, 1};
-    int count = mergeSort(arr, 0, arr.length - 1);
-    System.out.println(count);
-  }
+package shann.java.problems.sorting.mergesort.implementation;
 
+// TODO
+public class ReversePairCount {
   // Merge function to merge two sorted subarrays
   static void merge(int[] arr, int low, int mid, int high) {
     // Calculate the lengths of the two subarrays
@@ -82,5 +77,14 @@ public class ReversePairCount {
     merge(arr, low, mid, high);
 
     return cnt;
+  }
+
+  public static void main(String[] args) {
+//    int[] arr = {14046,57239,78362,99387,27609,55100,65536,62099,40820,33056,88380,78549,57512,33137,81212,32365,42276,65368,52459,74924,25355,76044,78056,45190,94365,58869,20611};
+    int[] arr = {1, 3, 2, 3, 1};
+    int n = arr.length;
+
+    // Function Call to count reverse pairs
+    System.out.println("Reverse pairs are: " + mergeSort(arr, 0, n - 1));
   }
 }

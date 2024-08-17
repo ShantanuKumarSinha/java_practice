@@ -1,14 +1,12 @@
 package shann.java.problems.hashMapAndHashSet;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public class FrequencyArray {
+public class FindCountOfElementsOfBinA {
   public static void main(String[] args) {
     int[] A = {1, 2, 1, 1};
-    int[] B = {1, 2, 5};
+    int[] B = {15,1, 2, 5};
+
     Map<Integer, Integer> freqMap = new HashMap<Integer, Integer>();
     for (int a : A) {
       if (freqMap.containsKey(a)) freqMap.put(a, freqMap.get(a) + 1);
