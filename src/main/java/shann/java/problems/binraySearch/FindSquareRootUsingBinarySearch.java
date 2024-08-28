@@ -4,4 +4,5 @@ public class FindSquareRootUsingBinarySearch {
     public static void main(String[] args){
 
     }
+
 }

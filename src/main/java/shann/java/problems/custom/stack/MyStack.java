@@ -15,14 +15,11 @@ public class MyStack<E> implements Serializable, Cloneable {
     return (E[]) myArray;
   }
 
-  public E[] push(E item) {
+  public void push(E item) {
     if (size() == myArray.length) {
       System.out.println("Stack is full");
-      return  (E[]) myArray;
     }
-    myArray[counter] = item;
-    counter++;
-    return (E[]) myArray;
+    myArray[counter++] = item;
   }
 
   public E[] pop() {
