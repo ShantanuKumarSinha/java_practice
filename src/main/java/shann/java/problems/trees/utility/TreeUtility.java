@@ -1,4 +1,7 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.utility;
+
+import shann.java.problems.trees.traversal.PostOrderTraversal;
+import shann.java.problems.trees.traversal.PreOrderTraversal;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.traversal;
 
 /*
 * Problem Description
@@ -55,6 +55,8 @@ Output 2:
  ]
 
 * */
+
+import shann.java.problems.trees.utility.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

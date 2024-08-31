@@ -1,4 +1,8 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.create;
+
+import static shann.java.problems.trees.utility.TreeUtility.preOrderTraversal;
+
+import shann.java.problems.trees.utility.TreeNode;
 
 /*
 Problem Description
@@ -66,7 +70,7 @@ public class BinaryTreeFromInOrderAndPostOrderTraversal {
     //    int[] inOrder = {6, 1, 3, 2};
     //    int[] postOrder = {6, 3, 2, 1};
     var result = buildTree(inOrder, postOrder, 0, inOrder.length - 1);
-    System.out.println(TreeUtility.preOrderTraversal(result));
+    System.out.println(preOrderTraversal(result));
   }
 
   public static TreeNode buildTree(int[] inorder, int[] postorder, int start, int end) {

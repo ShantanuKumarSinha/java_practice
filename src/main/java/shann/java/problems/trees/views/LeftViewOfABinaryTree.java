@@ -1,4 +1,6 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.views;
+
+import shann.java.problems.trees.utility.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -55,10 +57,10 @@ Input 2:
 Example Output
 Output 1:
 
- [1, 3, 7, 8]
+ [1, 2, 4, 8]
 Output 2:
 
- [1, 3, 4, 5]
+ [1, 2, 4, 5]
 
 
 Example Explanation
@@ -69,7 +71,7 @@ Explanation 2:
 
 Right view is described.
 */
-public class RightViewOfABinaryTree {
+public class LeftViewOfABinaryTree {
   public static void main(String[] args) {
     TreeNode root1 = new TreeNode(1);
     root1.left = new TreeNode(2);
@@ -79,7 +81,7 @@ public class RightViewOfABinaryTree {
     root1.right.left = new TreeNode(6);
     root1.right.right = new TreeNode(7);
     root1.left.left.left = new TreeNode(8);
-    var result1 = rightViewOfBinaryTree(root1);
+    var result1 = leftViewOfBinaryTree(root1);
     System.out.println(result1);
 
     TreeNode root2 = new TreeNode(1);
@@ -87,15 +89,16 @@ public class RightViewOfABinaryTree {
     root2.right = new TreeNode(3);
     root2.left.right = new TreeNode(4);
     root2.left.right.right = new TreeNode(5);
-    var result2 = rightViewOfBinaryTree(root2);
+    var result2 = leftViewOfBinaryTree(root2);
     System.out.println(result2);
   }
 
-  private static ArrayList<Integer> rightViewOfBinaryTree(TreeNode root) {
+  private static ArrayList<Integer> leftViewOfBinaryTree(TreeNode root) {
     ArrayList<Integer> result = new ArrayList<>();
     Deque<TreeNode> deque = new ArrayDeque<>();
     deque.add(root);
     var levelCount = deque.size();
+    result.add(root.val);
     while (!deque.isEmpty()) {
       TreeNode node = deque.poll();
       levelCount--;
@@ -106,8 +109,8 @@ public class RightViewOfABinaryTree {
         deque.addLast(node.right);
       }
       if (levelCount == 0) {
-        result.add(node.val);
         levelCount = deque.size();
+        if (!deque.isEmpty()) result.add(deque.peek().val);
       }
     }
 

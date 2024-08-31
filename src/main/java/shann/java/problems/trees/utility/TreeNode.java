@@ -1,4 +1,4 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.utility;
 
 public class TreeNode {
   public int val;

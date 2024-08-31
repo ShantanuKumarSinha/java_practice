@@ -1,4 +1,6 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.balanced;
+
+import shann.java.problems.trees.utility.TreeNode;
 
 /*
 * Problem Description
@@ -58,7 +60,6 @@ Because for the root node, left subtree has depth 2 and right subtree has depth 
 Difference = 2 > 1.
 * */
 public class BalancedBinaryTree {
-  int height = 0;
 
   public static void main(String[] args) {
     TreeNode root1 = new TreeNode(1);
@@ -69,24 +70,37 @@ public class BalancedBinaryTree {
     root2.left = new TreeNode(2);
     root2.left.left = new TreeNode(3);
 
+    TreeNode root3 = new TreeNode(1);
+    root3.left = new TreeNode(2);
+    root3.right = new TreeNode(3);
+    root3.left.left = new TreeNode(4);
+    root3.left.right = new TreeNode(5);
+    root3.left.left.left = new TreeNode(6);
+
+    TreeNode root4 = new TreeNode(6);
+    root4.left = new TreeNode(9);
+    root4.right = new TreeNode(4);
+    root4.right.left = new TreeNode(8);
+    root4.right.left.right = new TreeNode(3);
+
     BalancedBinaryTree balancedBinaryTree = new BalancedBinaryTree();
-    // System.out.println(balancedBinaryTree.isBalanced(root1));
+    System.out.println(balancedBinaryTree.isBalanced(root1));
     System.out.println(balancedBinaryTree.isBalanced(root2));
+    System.out.println(balancedBinaryTree.isBalanced(root3));
+    System.out.println(balancedBinaryTree.isBalanced(root4));
   }
 
   private boolean isBalanced(TreeNode root) {
-    if (root.left == null && root.right == null) return true;
-    height = 0;
+    if (root == null) return true;
     var leftHeight = root.left == null ? 0 : getHeight(root.left);
     var rightHeight = root.right == null ? 0 : getHeight(root.right);
-    if (root == null) return true;
-    else if (Math.abs(leftHeight - rightHeight) <= 1) return true;
-    return false;
+    if (Math.abs(leftHeight - rightHeight) > 1) return false;
+    return isBalanced(root.left) && isBalanced(root.right);
   }
 
   private int getHeight(TreeNode root) {
     if (root == null) return 0;
-    if (root.left == null && root.right == null) return 0;
+    if (root.left == null && root.right == null) return 1;
     var leftHeight = getHeight(root.left);
     var rightHeight = getHeight(root.right);
     return Math.max(leftHeight, rightHeight) + 1;

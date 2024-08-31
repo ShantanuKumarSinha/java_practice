@@ -1,4 +1,6 @@
-package shann.java.problems.trees;
+package shann.java.problems.trees.traversal;
+
+import shann.java.problems.trees.utility.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
