@@ -66,41 +66,61 @@ The target value should be inserted at index 1.
 
 */
 public class BinarySearch {
-  public static void main(String[] args) {
-//    var arr1 = new int[] {1, 3, 5, 6, 7, 22};
-//    var searchValue1 = 22;
-//    var result1 = findIndex(arr1, 0, arr1.length - 1, searchValue1);
-//    System.out.println(result1);
 
-        var arr2 = new int[] {1, 4, 9};
-        var searchValue2 = 3;
-        var result2 = findIndex(arr2, 0, arr2.length-1, searchValue2);
-        System.out.println(result2);
+  public static void main(String[] args) {
+
+    var arr1 = new int[] {1, 3, 5, 6, 7, 22};
+    var searchValue1 = 22;
+    var result1 = findIndex2(arr1, 0, arr1.length - 1, searchValue1);
+    System.out.println(result1);
+
+    var arr2 = new int[] {1, 4, 9};
+    var searchValue2 = 3;
+    var result2 = findIndex2(arr2, 0, arr2.length - 1, searchValue2);
+    System.out.println(result2);
+
+    var arr3 = new int[] {1, 3, 5, 6};
+    var searchValue3 = 7;
+    var result3 = findIndex2(arr3, 0, arr3.length - 1, searchValue3);
+    System.out.println(result3);
+
+    var arr4 =
+        new int[] {
+          141, 144, 145, 154, 229, 235, 243, 266, 344, 351, 466, 499, 512, 565, 641, 675, 690, 726,
+          805, 879, 978, 986
+        };
+    var searchValue4 = 65;
+    var result4 = findIndex(arr4, 0, arr4.length - 1, searchValue4);
+    System.out.println(result4);
+
+    int[] arr5 = {1,2,5,7};
+    var searchValue5 = 3;
+    var result5 = findIndex(arr5, 0, arr5.length - 1, searchValue5);
+    System.out.println(result5);
   }
 
   private static int findIndex(
       int[] nums, int startingIndex, int endingIndex, int numberToBeSearched) {
+    if (startingIndex > endingIndex) return startingIndex;
     int mid = startingIndex + (endingIndex - startingIndex) / 2;
-    int possibleMid=0;
+
     if (numberToBeSearched == nums[mid]) {
       return mid;
-    } else if (numberToBeSearched < nums[mid] && startingIndex==endingIndex) {
-        if(Math.abs(nums[mid]-numberToBeSearched)==1)
-            return mid;
-        else if(Math.abs(nums[mid]-numberToBeSearched)<Math.abs(nums[possibleMid]-numberToBeSearched))
-        possibleMid = mid;
-        return findIndex(nums, 0, mid-1, numberToBeSearched);
-    }else if (numberToBeSearched > nums[mid] && startingIndex==endingIndex) {
-        if(Math.abs(nums[mid]-numberToBeSearched)==1)
-            return mid;
-        else if(Math.abs(nums[mid]-numberToBeSearched)<Math.abs(nums[possibleMid]-numberToBeSearched))
-            possibleMid = mid;
-        return findIndex(nums, mid+1, nums.length-1, numberToBeSearched);
     } else if (numberToBeSearched < nums[mid]) {
       return findIndex(nums, startingIndex, mid - 1, numberToBeSearched);
-    } else if (numberToBeSearched > nums[mid] ) {
+    } else {
       return findIndex(nums, mid + 1, endingIndex, numberToBeSearched);
     }
-    return possibleMid;
+  }
+
+  private static int findIndex2(
+      int[] nums, int startingIndex, int endingIndex, int numberToBeSearched) {
+    while (startingIndex <= endingIndex) {
+      var mid = startingIndex + (endingIndex - startingIndex) / 2;
+      if (numberToBeSearched == nums[mid]) return mid;
+      else if (numberToBeSearched < nums[mid]) endingIndex = mid - 1;
+      else startingIndex = mid + 1;
+    }
+    return startingIndex;
   }
 }

@@ -1,6 +1,6 @@
-package shann.java.problems.binraySearch;
+package shann.java.problems.trees.balanced;
 //TODO
-public class BalancedBinarySearchTree {
+public class BalancedABinarySearchTree {
 
   //     3
   //    2 4
@@ -23,7 +23,7 @@ public class BalancedBinarySearchTree {
     int[] arr = {1, 2, 3, 4, 5, 6 , 7, 8, 9, 10};
     int l = 0, r = arr.length - 1;
     int search = 7;
-    BalancedBinarySearchTree balancedBinarySearchTree = new BalancedBinarySearchTree();
-    balancedBinarySearchTree.search(arr, l, r, search);
+    BalancedABinarySearchTree balancedABinarySearchTree = new BalancedABinarySearchTree();
+    balancedABinarySearchTree.search(arr, l, r, search);
   }
 }
