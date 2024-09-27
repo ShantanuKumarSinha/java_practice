@@ -58,36 +58,22 @@ No container is formed.
 */
 public class ContainersWithMostWater {
   public static void main(String[] args) {
-    var result = totalWaterTrapped(new int[] {0, 1, 0, 2, 1, 0, 3, 2, 1, 2, 1});
+    var result = maxArea(new int[]{1, 5, 4, 3});
     System.out.println(result);
   }
 
+
   private static int maxArea(int[] height) {
     int maxArea = 0, area = 0;
-
+    int left = 0, right = height.length - 1;
+    while (left < right) {
+      var minHeight = Math.min(height[left], height[right]);
+      area = minHeight*(right - left);
+      maxArea = Math.max(maxArea, area);
+      if (height[left] < height[right]) left++;
+      else right--;
+    }
     return maxArea;
   }
 
-  // total water trapped
-  private static int totalWaterTrapped(int[] height) {
-    var totalWaterTrapped = 0;
-    var maxHeightIndex = 0;
-    for (int i = 1; i < height.length; i++) {
-      if (height[i] > height[maxHeightIndex]) {
-        maxHeightIndex = i;
-      }
-    }
-    var lMax = height[0];
-    for (int i = 0; i < maxHeightIndex; i++) {
-      lMax = Math.max(lMax, height[i]);
-      totalWaterTrapped += lMax-height[i];
-    }
-    var rMax = height[height.length - 1];
-    for (int i = maxHeightIndex-1; i> maxHeightIndex; i--) {
-      rMax = Math.max(rMax, height[i]);
-      totalWaterTrapped += rMax-height[i];
-    }
-
-    return totalWaterTrapped;
-  }
 }

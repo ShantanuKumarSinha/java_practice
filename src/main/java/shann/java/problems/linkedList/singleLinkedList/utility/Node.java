@@ -1,10 +1,10 @@
-package shann.java.problems.linkedList;
+package shann.java.problems.linkedList.singleLinkedList.utility;
 // Definition for singly-linked list.
 public class Node {
     public int val;
     public Node next;
 
-    Node(int x) {
+    public Node(int x) {
         val = x;
         next = null;
     }

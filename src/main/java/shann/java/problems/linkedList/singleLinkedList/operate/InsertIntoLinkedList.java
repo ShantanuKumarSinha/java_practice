@@ -1,4 +1,4 @@
-package shann.java.problems.linkedList;
+package shann.java.problems.linkedList.singleLinkedList.operate;
 /*
 * Problem Description
 You are given A which is the head of a linked list. Also given is the value B and position C. Complete the function that should insert a new node with the said value at the given position.
@@ -58,6 +58,9 @@ The new node is add to the head of the linked list
 For Input 2:
 The new node is added after the first node of the linked list
 * */
+
+import shann.java.problems.linkedList.singleLinkedList.utility.LinkedListUtilityClass;
+import shann.java.problems.linkedList.singleLinkedList.utility.Node;
 
 public class InsertIntoLinkedList {
   public static void main(String[] args) {

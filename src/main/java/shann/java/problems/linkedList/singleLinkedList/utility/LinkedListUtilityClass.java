@@ -1,4 +1,5 @@
-package shann.java.problems.linkedList;
+package shann.java.problems.linkedList.singleLinkedList.utility;
+
 /*
 * Problem Description
 You are given A which is the head of a linked list. Print the linked list in space separated manner.
@@ -50,5 +51,6 @@ public class LinkedListUtilityClass {
       else System.out.print(linkedList.val + " ");
       linkedList = linkedList.next;
     }
+    System.out.println();
   }
 }

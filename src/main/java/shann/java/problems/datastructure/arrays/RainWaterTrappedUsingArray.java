@@ -4,9 +4,14 @@ public class RainWaterTrappedUsingArray {
   private static int[] right;
 
   public static void main(String[] args) {
-    int[] arr = {0, 1, 0, 2, 1, 0, 3, 2, 1, 2, 1};
-    int result = trap(arr);
-    System.out.println(result);
+
+    int[] arr1 = {1, 0, 2, 3, 1};
+    var result1 = trap(arr1);
+    System.out.println(result1);
+
+    int[] arr2 = {0, 1, 0, 2, 1, 0, 3, 2, 1, 2, 1};
+    var result2 = trap(arr2);
+    System.out.println(result2);
   }
 
   private static int trap(int[] height) {
@@ -25,8 +30,8 @@ public class RainWaterTrappedUsingArray {
     for (int i = 0; i < height.length; i++) {
       water[i] = Math.min(left[i], right[i]) - height[i];
     }
-//    i =0 & i = height.length-1 does not contribute
-    for (int i = 1; i < height.length-1; i++) {
+    //    i =0 & i = height.length-1 does not contribute
+    for (int i = 1; i < height.length - 1; i++) {
       if (water[i] > 0) totalWater = totalWater + water[i];
     }
     return totalWater;

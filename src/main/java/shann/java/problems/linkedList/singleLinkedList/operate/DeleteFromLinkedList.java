@@ -1,4 +1,8 @@
-package shann.java.problems.linkedList;
+package shann.java.problems.linkedList.singleLinkedList.operate;
+
+import shann.java.problems.linkedList.singleLinkedList.utility.LinkedListUtilityClass;
+import shann.java.problems.linkedList.singleLinkedList.utility.Node;
+
 /*
 * Problem Description
 You are given the head of a linked list A and an integer B. Delete the B-th node from the linked list.

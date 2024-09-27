@@ -2,6 +2,7 @@ package shann.java.problems.linkedList;
 
 
 import org.junit.jupiter.api.Test;
+import shann.java.problems.linkedList.singleLinkedList.operate.InsertIntoLinkedList;
 
 class InsertIntoLinkedListTestCases {
     @Test

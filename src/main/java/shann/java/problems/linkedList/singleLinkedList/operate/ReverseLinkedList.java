@@ -1,4 +1,4 @@
-package shann.java.problems.linkedList;
+package shann.java.problems.linkedList.singleLinkedList.operate;
 
 /*
 * Problem Description
@@ -52,6 +52,9 @@ Expalantion 2:
  The linked list consists of only a single node. After reversing it, the list becomes : 3 -> NULL
 * */
 
+import shann.java.problems.linkedList.singleLinkedList.utility.LinkedListUtilityClass;
+import shann.java.problems.linkedList.singleLinkedList.utility.Node;
+
 public class ReverseLinkedList {
   public static void main(String[] args) {
     Node head = new Node(1);
@@ -63,7 +66,7 @@ public class ReverseLinkedList {
     LinkedListUtilityClass.printValueFromLinkedList(reversedLinkedList);
   }
 
-  protected static Node reverseTheLinkedList(Node head) {
+  public static Node reverseTheLinkedList(Node head) {
     Node prev = null;
     Node curr = head;
     while (curr != null) {
