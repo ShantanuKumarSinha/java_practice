@@ -42,7 +42,7 @@ The prime numbers from 1 to 12 are 2, 3, 5, 7 and 11.
 */
 public class FindAllPrimes {
   public static void main(String[] args) {
-    var result = findAllPrimes(49);
+    var result = findAllPrimes(30);
     PrintItemsInArray.printItemsInArray(result);
   }
 

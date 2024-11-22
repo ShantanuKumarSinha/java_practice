@@ -69,7 +69,7 @@ Explanation 2:
  Sum of value of all subarray is 110.
 * */
 
-//TODO
+// TODO go through the code
 public class SubArrayOrOptimizedSolution {
   public static void main(String[] args) {
     SubArrayOrOptimizedSolution subArrayOr = new SubArrayOrOptimizedSolution();
@@ -77,8 +77,23 @@ public class SubArrayOrOptimizedSolution {
   }
 
   private int sumOfSubArraysOr(int[] arr) {
-    int sum = 0, subArrayOr = 0;
-
-    return sum;
+    int n = arr.length;
+    int[] idx = new int[32];
+    long ans = 0;
+    for (int i = 1; i <= n; ++i) {
+      long tmp = arr[i - 1];
+      for (int j = 0; j <= 31; ++j) {
+        long pw = 1 << j;
+        if ((tmp & pw) != 0) { // if jth bit is set
+          ans += pw * i; // add its contribution in ans for all subarrays ending at index i
+          idx[j] = i; // store the index for next elements
+        } else if (idx[j] != 0) // if jth bit is not set
+        {
+          ans +=
+              pw * idx[j]; // add its contribution in ans for all subarrays ending at index i using
+        } // the information of last element having jth bit set
+      }
+    }
+    return (int) (ans % 1000000007);
   }
 }

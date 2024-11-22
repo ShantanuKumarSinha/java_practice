@@ -1,7 +1,7 @@
 package shann.java.problems.trees.utility;
 
-import shann.java.problems.trees.traversal.PostOrderTraversal;
-import shann.java.problems.trees.traversal.PreOrderTraversal;
+import shann.java.problems.trees.binaryTree.traversal.PostOrderTraversal;
+import shann.java.problems.trees.binaryTree.traversal.PreOrderTraversal;
 
 import java.util.List;
 

@@ -3,9 +3,9 @@ package shann.java.problems.recursion;
 //
 public class ValueOfMoneyAfterDepreceation {
   public static void main(String[] args) {
-    int money = 50000000;
+    int money = 15000000;
     int depreceation = 6;
-    int tenuer = 45;
+    int tenuer = 15;
     int deprecatedValue = 0;
     var effectiveMoney = findDepreceatedValue(money, depreceation, tenuer);
     System.out.println(effectiveMoney);
