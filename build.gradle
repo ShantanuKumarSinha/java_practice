@@ -6,7 +6,7 @@ ext {
     versions = [
             lombokVersion : '1.18.36',
             jacksonVersion : '2.16.1',
-            junitJupiterEngine : '5.9.1',
+            junitJupiterEngine : '5.11.3',
             junitJupiterVersion : '5.11.3'
     ]
 }
