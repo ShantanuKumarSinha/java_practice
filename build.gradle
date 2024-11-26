@@ -1,0 +1,29 @@
+plugins {
+    id('java')
+}
+
+ext {
+    versions = [
+            lombokVersion : '1.18.36',
+            jacksonVersion : '2.16.1',
+            junitVersion : '5.9.1',
+            junitJupiterVersion : '5.9.1'
+    ]
+}
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly("org.projectlombok:lombok:${versions.lombokVersion}")
+    implementation("com.fasterxml.jackson.core:jackson-databind:${versions.jacksonVersion}")
+    testImplementation(platform("org.junit:junit-bom:${versions.junitVersion}"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
