@@ -6,8 +6,8 @@ ext {
     versions = [
             lombokVersion : '1.18.36',
             jacksonVersion : '2.16.1',
-            junitVersion : '5.9.1',
-            junitJupiterVersion : '5.9.1'
+            junitJupiterEngine : '5.9.1',
+            junitJupiterVersion : '5.11.3'
     ]
 }
 group = 'org.example'
@@ -20,8 +20,9 @@ repositories {
 dependencies {
     compileOnly("org.projectlombok:lombok:${versions.lombokVersion}")
     implementation("com.fasterxml.jackson.core:jackson-databind:${versions.jacksonVersion}")
-    testImplementation(platform("org.junit:junit-bom:${versions.junitVersion}"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}")
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}"
+//    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}")
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${versions.junitJupiterEngine}"
 }
 
 tasks.test {
