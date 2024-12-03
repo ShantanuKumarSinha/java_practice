@@ -83,6 +83,7 @@ public class ZeroOneKnapsack {
     fillArray(dp);
     ZeroOneKnapsack knapsack = new ZeroOneKnapsack();
     System.out.println(knapsack.zeroOneKnapsack(n - 1, capacity, weight, value, dp));
+    System.out.println(knapsack.zeroOneKnapsack2(weight, value, capacity));
   }
 
   private static void fillArray(int[][] arr) {
@@ -93,6 +94,7 @@ public class ZeroOneKnapsack {
     }
   }
 
+  // top-down approach
   private int zeroOneKnapsack(int i, int j, int[] weight, int[] value, int[][] dp) {
     if (i < 0 || j < 0) return 0;
     if (dp[i][j] != -1) return dp[i][j];
@@ -103,5 +105,23 @@ public class ZeroOneKnapsack {
     }
     dp[i][j] = Math.max(select, reject);
     return dp[i][j];
+  }
+
+  // bottom up approach
+  private int zeroOneKnapsack2(int[] weight, int[] value, int capacity) {
+    int[][] dp = new int[weight.length + 1][capacity + 1];
+
+    for (int i = 0; i <= weight.length; i++) {
+      for (int j = 0; j <= capacity; j++) {
+        if (i == 0 || j == 0) dp[i][j] = 0;
+        else {
+          var rej = dp[i - 1][j];
+          var sel = 0;
+          if (weight[i - 1] <= j) sel = dp[i - 1][j - weight[i - 1]] + value[i - 1];
+          dp[i][j] = Math.max(sel, rej);
+        }
+      }
+    }
+    return dp[weight.length][capacity];
   }
 }

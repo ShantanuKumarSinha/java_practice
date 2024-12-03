@@ -1,5 +1,7 @@
 package shann.java.problems.dynamicProgramming.oneDimensional;
 
+import java.util.Arrays;
+
 /*
 Problem Description
 
@@ -63,10 +65,16 @@ public class MinimumNumbersOfSquare {
     System.out.println(result1);
 
     int[] dp2 = new int[34];
+    Arrays.fill(dp2, Integer.MAX_VALUE);
+    dp2[0]=0;
+    dp2[1]=1;
     var result2 = minimumNumbersOfSquare.minNumberOfSquares2(33, dp2);
     System.out.println(result2);
 
-    int[] dp3 = new int[13];
+    int[] dp3 = new int[14];
+    Arrays.fill(dp3, Integer.MAX_VALUE);
+    dp3[0]=0;
+    dp3[1]=1;
     var result3 = minimumNumbersOfSquare.minNumberOfSquares2(13, dp3);
     System.out.println(result3);
   }
@@ -89,7 +97,6 @@ public class MinimumNumbersOfSquare {
   // top down approach memoization
   public int minNumberOfSquares2(int n, int[] dp) {
     if (n <= 1) return n;
-    dp[1] = 1;
     if (dp[n] != Integer.MAX_VALUE) return dp[n];
     for (int i = 1; i * i <= n; i++) {
       dp[n - i * i] =

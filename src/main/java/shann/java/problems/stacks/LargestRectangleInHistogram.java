@@ -83,15 +83,10 @@ public class LargestRectangleInHistogram {
     result[0] = -1;
     Stack<Integer> stack = new Stack<>();
     for (int i = 1; i < arr.length; i++) {
-      if (stack.isEmpty() && arr[i - 1] < arr[i]) {
-        stack.push(i - 1);
-        result[i] = stack.peek();
-      } else if (stack.isEmpty() && arr[i - 1] >= arr[i]) {
+      if (stack.isEmpty() && arr[i - 1] >= arr[i]) {
         result[i] = -1;
-      } else if (!stack.isEmpty() && arr[i - 1] < arr[i]) {
+      } else if (arr[i - 1] < arr[i]) {
         stack.push(i - 1);
-        result[i] = stack.peek();
-      } else if (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
         result[i] = stack.peek();
       } else {
         while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
@@ -109,15 +104,10 @@ public class LargestRectangleInHistogram {
     result[arr.length - 1] = arr.length;
     Stack<Integer> stack = new Stack<>();
     for (int i = arr.length - 2; i >= 0; i--) {
-      if (stack.isEmpty() && arr[i + 1] < arr[i]) {
-        stack.push(i + 1);
-        result[i] = stack.peek();
-      } else if (stack.isEmpty() && arr[i + 1] >= arr[i]) {
+      if (stack.isEmpty() && arr[i + 1] >= arr[i]) {
         result[i] = arr.length;
-      } else if (!stack.isEmpty() && arr[i + 1] < arr[i]) {
+      } else if (arr[i + 1] < arr[i]) {
         stack.push(i + 1);
-        result[i] = stack.peek();
-      } else if (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
         result[i] = stack.peek();
       } else {
         while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {

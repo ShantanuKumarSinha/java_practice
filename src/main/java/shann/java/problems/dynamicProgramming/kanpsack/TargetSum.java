@@ -66,7 +66,7 @@ public class TargetSum {
         // exclude the current element
         dp[i][j] = dp[i - 1][j];
         // Include the current element if it's not larger than j
-        if (j >= nums[i - 1]) {
+        if (nums[i - 1]<=j) {
           dp[i][j] = dp[i][j] || dp[i - 1][j - nums[i - 1]];
         }
       }
