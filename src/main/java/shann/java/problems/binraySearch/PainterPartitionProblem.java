@@ -1,8 +1,8 @@
 package shann.java.problems.binraySearch;
 
-import java.util.Arrays;
-
 import static shann.java.problems.binraySearch.IsPaintPossible.isPaintPossible;
+
+import java.util.Arrays;
 
 /*
 * Problem Description
@@ -76,18 +76,20 @@ Explanation 2:
 public class PainterPartitionProblem {
   public static void main(String[] args) {
     System.out.println(minTime(new int[]{1,10},5,2));
+    System.out.println(minTime(new int[]{1,8, 11, 3},1,10));
     System.out.println(minTime(new int[] {5, 3, 6, 1, 9}, 2, 2));
     // for the below scenario handle the modulo and use long
-    //System.out.println(minTime(new int[] {1000000,1000000}, 1000000, 1));
+    System.out.println(minTime(new int[] {1000000,1000000}, 1000000, 1));
   }
 
   private static int minTime(int[] arr, int t, int maxPainters) {
-    var ans = 0;
-    var maxElement = Arrays.stream(arr).max().orElseGet(() -> Integer.MIN_VALUE) * t;
-    var sumOfAll = Arrays.stream(arr).reduce((a, b) -> a + b).getAsInt() * t;
+    int modulo = 10000003;
+    long ans = 0;
+    var maxElement = Arrays.stream(arr).max().orElseGet(() -> Integer.MIN_VALUE);
+    var sumOfAll = Arrays.stream(arr).reduce((a, b) -> a + b).getAsInt();
 
-    var start = maxElement;
-    var end = sumOfAll;
+    long start = (long)maxElement*t;
+    long end = (long)sumOfAll*t;
 
     while (start <= end) {
       var mid = start + (end - start) / 2;
@@ -98,6 +100,6 @@ public class PainterPartitionProblem {
         start = mid + 1;
       }
     }
-    return ans;
+    return (int)(ans%modulo);
   }
 }

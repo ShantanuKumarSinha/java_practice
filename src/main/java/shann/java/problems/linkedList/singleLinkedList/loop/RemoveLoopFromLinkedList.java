@@ -1,10 +1,9 @@
 package shann.java.problems.linkedList.singleLinkedList.loop;
 
-import shann.java.problems.linkedList.singleLinkedList.utility.LinkedListUtilityClass;
-import shann.java.problems.linkedList.singleLinkedList.utility.Node;
-
 import java.util.HashSet;
 import java.util.Set;
+import shann.java.problems.linkedList.singleLinkedList.utility.LinkedListUtilityClass;
+import shann.java.problems.linkedList.singleLinkedList.utility.Node;
 
 /*
 Problem Description
@@ -71,6 +70,7 @@ Explanation 2:
  Chain of 4->6 is broken.
 */
 public class RemoveLoopFromLinkedList {
+
   public static void main(String[] args) {
 
     Node head1 = new Node(3);
@@ -79,13 +79,15 @@ public class RemoveLoopFromLinkedList {
     head1.next.next.next = new Node(5);
     head1.next.next.next.next = new Node(6);
     head1.next.next.next.next.next = head1.next.next;
-    var result1 = hasCycle(head1) ? removeLoop(head1) : head1;
+    // var result1 = hasCycle(head1) ? removeLoop(head1) : head1;
+    var result1 = removeLoop2(head1);
     LinkedListUtilityClass.printValueFromLinkedList(result1);
 
     Node head2 = new Node(1);
     head2.next = new Node(2);
     head2.next.next = new Node(3);
-    var result2 = hasCycle(head2) ? removeLoop(head2) : head2;
+    //    var result2 = hasCycle(head2) ? removeLoop(head2) : head2;
+    var result2 = removeLoop2(head2);
     LinkedListUtilityClass.printValueFromLinkedList(result2);
   }
 
@@ -117,5 +119,45 @@ public class RemoveLoopFromLinkedList {
       else return true;
     }
     return false;
+  }
+
+  // second way
+  private static Node removeLoop2(Node head) {
+    var slow = head.next;
+    var fast = head.next.next;
+    
+    if (hasCycle2(slow, fast)) {
+      while (slow != fast) {
+        slow = slow.next;
+        fast = fast.next.next;
+      }
+      // fast = fast.next.next;
+      slow = head;
+      while (slow != fast) {
+        slow = slow.next;
+        fast = fast.next;
+      }
+      var tail = fast;
+      while (tail.next != fast) tail = tail.next;
+      tail.next = null;
+    }
+    return head;
+  }
+
+  private static boolean hasCycle2(Node first, Node second) {
+
+    while (second != null
+        && second.next != null
+        && second.next.next != null
+        && first.next != second.next.next) {
+      first = first.next;
+      second = second.next.next;
+    }
+
+    return second == null
+        ? false
+        : second.next == null
+            ? false
+            : second.next.next == null ? false : first.next == second.next.next;
   }
 }

@@ -7,7 +7,8 @@ ext {
             lombokVersion : '1.18.36',
             jacksonVersion : '2.16.1',
             junitJupiterEngine : '5.11.3',
-            junitJupiterVersion : '5.11.3'
+            junitJupiterVersion : '5.11.3',
+            wireMockVersion: '3.10.0'
     ]
 }
 group = 'org.example'
@@ -20,6 +21,8 @@ repositories {
 dependencies {
     compileOnly("org.projectlombok:lombok:${versions.lombokVersion}")
     implementation("com.fasterxml.jackson.core:jackson-databind:${versions.jacksonVersion}")
+    // https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock
+    implementation "org.wiremock:wiremock:${versions.wireMockVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}"
 //    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${versions.junitJupiterEngine}"

@@ -99,6 +99,8 @@ public class FinishMaximumJobs {
             return Integer.compare(o1[1], o2[1]);
           }
         });
+
+    //Arrays.sort(pair, Comparator.comparingInt(o -> o[1]));
     int count = 1;
     var lastEndTime = pair[0][1];
     for (int i = 1; i < pair.length; i++) {
