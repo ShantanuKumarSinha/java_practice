@@ -1,4 +1,4 @@
-package shann.java.problems.binraySearch;
+package shann.java.problems.binraySearch.rotated;
 
 /*
 * Problem Description

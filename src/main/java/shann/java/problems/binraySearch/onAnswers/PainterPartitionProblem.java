@@ -1,6 +1,6 @@
-package shann.java.problems.binraySearch;
+package shann.java.problems.binraySearch.onAnswers;
 
-import static shann.java.problems.binraySearch.IsPaintPossible.isPaintPossible;
+import static shann.java.problems.binraySearch.onAnswers.IsPaintPossible.isPaintPossible;
 
 import java.util.Arrays;
 

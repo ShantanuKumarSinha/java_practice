@@ -74,53 +74,57 @@ import shann.java.problems.trees.utility.TreeNode;
 
 public class ValidBinarySearchTree {
   public static void main(String[] args) {
-    TreeNode root1 = new TreeNode(1);
-    root1.left = new TreeNode(2);
-    root1.right = new TreeNode(3);
-    System.out.println(isValidBST(root1, Integer.MIN_VALUE, Integer.MAX_VALUE));
+//    TreeNode root1 = new TreeNode(1);
+//    root1.left = new TreeNode(2);
+//    root1.right = new TreeNode(3);
+//    System.out.println(isValidBST(root1, Integer.MIN_VALUE, Integer.MAX_VALUE));
+//
+//    TreeNode root2 = new TreeNode(2);
+//    root2.left = new TreeNode(1);
+//    root2.right = new TreeNode(3);
+//    System.out.println(isValidBST(root2, Integer.MIN_VALUE, Integer.MAX_VALUE));
+//
+//    TreeNode root3 = new TreeNode(4);
+//    root3.left = new TreeNode(2);
+//    root3.right = new TreeNode(6);
+//    root3.left.left = new TreeNode(1);
+//    root3.left.right = new TreeNode(3);
+//    root3.right.left = new TreeNode(5);
+//    root3.right.right = new TreeNode(7);
+//    System.out.println(isValidBST(root3, Integer.MIN_VALUE, Integer.MAX_VALUE));
+//
+//    TreeNode root4 = new TreeNode(6);
+//    root4.left = new TreeNode(9);
+//    root4.right = new TreeNode(4);
+//    root4.right.left = new TreeNode(8);
+//    root4.right.left.right = new TreeNode(3);
+//    System.out.println(isValidBST(root4, Integer.MIN_VALUE, Integer.MAX_VALUE));
+//
+//    TreeNode root5 = new TreeNode(13);
+//    root5.left = new TreeNode(10);
+//    root5.right = new TreeNode(17);
+//    root5.left.left = new TreeNode(5);
+//    root5.left.right = new TreeNode(14);
+//    root5.right.left = new TreeNode(12);
+//    root5.right.right = new TreeNode(18);
+//    System.out.println(isValidBST(root5, Integer.MIN_VALUE, Integer.MAX_VALUE));
+//
+//    TreeNode root6 = new TreeNode(8);
+//    root6.left = new TreeNode(4);
+//    root6.right = new TreeNode(20);
+//    root6.left.left = new TreeNode(2);
+//    root6.left.right = new TreeNode(9);
+//    root6.left.left.left = new TreeNode(1);
+//    root6.left.left.right = new TreeNode(3);
+//    root6.left.right.left = new TreeNode(5);
+//    root6.left.right.right = new TreeNode(10);
+//    System.out.println(isValidBST(root6, Integer.MIN_VALUE, Integer.MAX_VALUE));
 
-    TreeNode root2 = new TreeNode(2);
-    root2.left = new TreeNode(1);
-    root2.right = new TreeNode(3);
-    System.out.println(isValidBST(root2, Integer.MIN_VALUE, Integer.MAX_VALUE));
-
-    TreeNode root3 = new TreeNode(4);
-    root3.left = new TreeNode(2);
-    root3.right = new TreeNode(6);
-    root3.left.left = new TreeNode(1);
-    root3.left.right = new TreeNode(3);
-    root3.right.left = new TreeNode(5);
-    root3.right.right = new TreeNode(7);
-    System.out.println(isValidBST(root3, Integer.MIN_VALUE, Integer.MAX_VALUE));
-
-    TreeNode root4 = new TreeNode(6);
-    root4.left = new TreeNode(9);
-    root4.right = new TreeNode(4);
-    root4.right.left = new TreeNode(8);
-    root4.right.left.right = new TreeNode(3);
-    System.out.println(isValidBST(root4, Integer.MIN_VALUE, Integer.MAX_VALUE));
-
-    TreeNode root5 = new TreeNode(13);
-    root5.left = new TreeNode(10);
-    root5.right = new TreeNode(17);
-    root5.left.left = new TreeNode(5);
-    root5.left.right = new TreeNode(14);
-    root5.right.left = new TreeNode(12);
-    root5.right.right = new TreeNode(18);
-    System.out.println(isValidBST(root5, Integer.MIN_VALUE, Integer.MAX_VALUE));
-
-    TreeNode root6 = new TreeNode(8);
-    root6.left = new TreeNode(4);
-    root6.right = new TreeNode(20);
-    root6.left.left = new TreeNode(2);
-    root6.left.right = new TreeNode(9);
-    root6.left.left.left = new TreeNode(1);
-    root6.left.left.right = new TreeNode(3);
-    root6.left.right.left = new TreeNode(5);
-    root6.left.right.right = new TreeNode(10);
-    System.out.println(isValidBST(root6, Integer.MIN_VALUE, Integer.MAX_VALUE));
+    TreeNode root7 = new TreeNode(1);
+    root7.right = new TreeNode(1);
+    System.out.println(isValidBST(root7, Integer.MIN_VALUE, Integer.MAX_VALUE));
     try {
-      checkBSTViaInOrderTraversal(root6);
+      checkBSTViaInOrderTraversal(root7);
     } catch (Exception e) {
       System.out.println(e);
     }

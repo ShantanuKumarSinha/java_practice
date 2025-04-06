@@ -37,7 +37,7 @@ tasks.test {
 //    standardOutput = file('dependency-report.tree')
 //}
 
-task generateDependencyTree(type: DependencyReportTask) {
+task dependencyTree(type: DependencyReportTask) {
     //configuration = configurations.compile  // Replace with your desired configuration
     outputFile = file('dependency.tree')   // Define the output file
 }

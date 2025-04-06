@@ -1,4 +1,4 @@
-package shann.java.problems.custom.hashmap;
+package shann.java.problems.create.custom.hashmap;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package shann.java.problems.binraySearch;
+package shann.java.problems.binraySearch.onAnswers;
 
 public class IsPaintPossible {
   public static void main(String[] args) {

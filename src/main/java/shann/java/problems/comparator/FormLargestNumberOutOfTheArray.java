@@ -9,6 +9,7 @@ public class FormLargestNumberOutOfTheArray {
     //int[] arr = {0, 0, 0, 0};
     var boxedArray = Arrays.stream(arr).boxed().toArray(Integer[]::new);
     Arrays.sort(boxedArray, new CompareTwoNumbers().reversed());
+    
     StringBuilder stringBuilder = new StringBuilder();
     Arrays.stream(boxedArray).forEach(stringBuilder::append);
     System.out.println(stringBuilder.toString());

@@ -9,7 +9,7 @@ public class ReverseItemsAndWordsUsingStreams {
     //write a program to reverse each word individually in the string
     public static void main(String[] arsgs){
         String stringToBeReversed = "I Love Java";
-        stringToBeReversed = "bjwapykfil ymg bsypbqu rp nnvwwx muiapt pfwlcsnkqz mazvb hncn ya qisjiabv wnzjh w eimspekey rfmy bwroafq";
+        //stringToBeReversed = "bjwapykfil ymg bsypbqu rp nnvwwx muiapt pfwlcsnkqz mazvb hncn ya qisjiabv wnzjh w eimspekey rfmy bwroafq";
         var list1 = Arrays.asList(stringToBeReversed.split(" "));
         Collections.reverse(list1);
         for(var item : list1){

@@ -1,4 +1,4 @@
-package shann.java.problems.custom.stack;
+package shann.java.problems.create.custom.stack;
 
 
 public class MyStackTestCase{

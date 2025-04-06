@@ -1,5 +1,7 @@
 package shann.java.problems.hashMapAndHashSet;
 
+import java.util.Arrays;
+
 /*
 Problem Description
 
@@ -83,9 +85,8 @@ public class LongestIncreasingSubSequence {
 
   private int findLongestIncreasingSubSequence(int[] arr) {
     var result = new int[arr.length];
-    for (var i = 0; i < result.length; i++) {
-      result[i] = 1;
-    }
+    Arrays.fill(result, 1);
+
     for (var i = 0; i < arr.length; i++) {
       for (int j = 0; j <= i - 1; j++) {
         if (arr[j] < arr[i]) {

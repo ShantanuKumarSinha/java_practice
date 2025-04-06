@@ -1,4 +1,4 @@
-package shann.java.problems.custom.queue;
+package shann.java.problems.create.custom.queue;
 
 import java.io.Serializable;
 import java.util.Arrays;
