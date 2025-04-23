@@ -8,7 +8,8 @@ ext {
             jacksonVersion : '2.16.1',
             junitJupiterEngine : '5.11.3',
             junitJupiterVersion : '5.11.3',
-            wireMockVersion: '3.10.0'
+            wireMockVersion: '3.10.0',
+            apacheCommon3Version: '3.17.0'
     ]
 }
 group = 'org.example'
@@ -23,6 +24,8 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:${versions.jacksonVersion}")
     // https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock
     implementation "org.wiremock:wiremock:${versions.wireMockVersion}"
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation "org.apache.commons:commons-lang3:${versions.apacheCommon3Version}"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}"
 //    testImplementation("org.junit.jupiter:junit-jupiter-api:${versions.junitJupiterVersion}")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${versions.junitJupiterEngine}"

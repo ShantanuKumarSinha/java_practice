@@ -15,7 +15,7 @@ public class FindMaxElement {
 
     // TODO: Implement a generic method called 'findMax' that finds and returns the maximum element from an array.
     public static <T> T[] findMax(T[] array){
-        Arrays.sort(array,);
+        Arrays.sort(array);
         return (T[]) array[array.length];
     }
 
